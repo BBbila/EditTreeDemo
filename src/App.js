@@ -1,6 +1,7 @@
 import React from "react";
 import { CONTEXT } from "./config";
 import EchartsBox from "./pages/echarts/index";
+import Events from "./pages/events/index";
 
 import "./App.css";
 
@@ -21,6 +22,7 @@ function App() {
           render={() => <Redirect to={`${CONTEXT}/echarts`}></Redirect>}
         ></Route>
         <Route exact path={`${CONTEXT}/echarts`} component={EchartsBox} />
+        <Route exact path={`${CONTEXT}/events`} component={Events} />
       </Switch>
     </Router>
   );

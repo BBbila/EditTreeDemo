@@ -1,18 +1,18 @@
 import * as echarts from "echarts";
-import classnames from "classnames";
 import React, { useEffect } from "react";
 import styles from "./index.module.less";
 import {
   lineOption,
   pieOption,
-  columnarOption,
-  hightLightOption,
+  barOption,
+  completeLineOption,
+  hightLightLineOption,
 } from "./echart";
 
 function EchartsBox() {
   useEffect(() => {
-    const idArr = ["box-line", "box-pie", "box-columnar"];
-    const optArr = [hightLightOption, pieOption, columnarOption];
+    const idArr = ["box-line", "box-pie", "box-bar"];
+    const optArr = [hightLightLineOption, pieOption, barOption];
     renderEcharts(idArr, optArr);
   });
 
@@ -28,7 +28,7 @@ function EchartsBox() {
     <div className={styles.contentWrap}>
       <div className={styles.box} id="box-line"></div>
       <div className={styles.boxHigher} id="box-pie"></div>
-      <div className={styles.box} id="box-columnar"></div>
+      <div className={styles.boxHigher} id="box-bar"></div>
     </div>
   );
 }
